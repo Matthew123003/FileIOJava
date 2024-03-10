@@ -17,12 +17,9 @@ public class ReadFour
             try{
                 Scanner fileIn = new Scanner(new File("/Users/matthew/Projects/FileIOJava/Step4/input.txt"));
                 while(fileIn.hasNext()){
-                    String lineIn = fileIn.nextLine();
-                    String[] input = lineIn.split(",");
+                    int lineIn = fileIn.nextInt();
                     int sum = 0;
-                    for(int i = 0; i < input.length; i++){
-                        sum += Integer.parseInt(input[i]);
-                    }
+                    sum = sum + lineIn;
                     System.out.println(sum);
                 }
             }catch(IOException e){
