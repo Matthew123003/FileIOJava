@@ -15,7 +15,7 @@ public class ReadFour
             // Print out a running total of all the
             // values in the input file.
             try{
-                Scanner fileIn = new Scanner(new File("input.txt"));
+                Scanner fileIn = new Scanner(new File("/Users/matthew/Projects/FileIOJava/Step4/input.txt"));
                 while(fileIn.hasNext()){
                     String lineIn = fileIn.nextLine();
                     String[] input = lineIn.split(",");
