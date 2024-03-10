@@ -18,7 +18,12 @@ public class ReadFour
                 Scanner fileIn = new Scanner(new File("input.txt"));
                 while(fileIn.hasNext()){
                     String lineIn = fileIn.nextLine();
-                    System.out.println(lineIn);
+                    String[] input = lineIn.split(",");
+                    int sum = 0;
+                    for(int i = 0; i < input.length; i++){
+                        sum += Integer.parseInt(input[i]);
+                    }
+                    System.out.println(sum);
                 }
             }catch(IOException e){
                 System.out.println("File not found");
