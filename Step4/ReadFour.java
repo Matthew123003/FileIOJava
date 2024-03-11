@@ -17,10 +17,13 @@ public class ReadFour
             try{
                 Scanner fileIn = new Scanner(new File("/Users/matthew/Projects/FileIOJava/Step4/input.txt"));
                 while(fileIn.hasNext()){
-                    int lineIn = fileIn.nextInt();
+                    String lineIn = fileIn.nextLine();
+                    String[] input = lineIn.split(",");
                     int sum = 0;
-                    sum = sum + lineIn;
-                    System.out.println(sum);
+                    for(int i = 0; i < input.length; i++) {
+                        sum += Integer.parseInt(input[i]);
+                        System.out.println(sum);
+                    }
                 }
             }catch(IOException e){
                 System.out.println("File not found");
