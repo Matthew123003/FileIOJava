@@ -21,7 +21,7 @@ public class ReadFour
                 while(fileIn.hasNext()){
                     int lineIn = fileIn.nextInt();
                     sum = sum + lineIn;
-                    System.out.println("sum);
+                    System.out.println("Running total is: " + sum);
                 }
                 fileIn.close();
             }catch(IOException e){
